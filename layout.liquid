@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js">
+  
+{% snippet 'head' %}
+
+<body class="home">
+
+  <!-- HEADER -->
+  <header>
+    <div class="wrapper cf">
+      
+      <div id="logo">
+        <a href="{{ site.url }}"><h1>{{ page.name | upcase }}</h1></a>
+      </div>
+      
+      <!-- nav -->
+      <ul id="nav" class="sf-menu">
+        <li class="current-menu-item"><a href="{{ site.url }}">HOME</a></li>
+        <li><a href="{% template_url 'blog' %}">BLOG</a></li>
+        <li><a href="{% template_url 'about' %}">ABOUT</a></li>
+        <li><a href="{% template_url 'contact' %}">CONTACT</a></li>
+      </ul>
+      <div id="combo-holder"></div>
+      <!-- ends nav -->
+
+      <!-- SLIDER -->       
+      <div id="home-slider" class="lof-slidecontent">
+        
+        <div class="preload"><div></div></div>
+        
+        <!-- slider content --> 
+        <div class="main-slider-content" >
+          <ul class="sliders-wrap-inner">
+            <li>
+              <img src="{{ page.cover }}" title="" alt="alt" width="100%" style="position:relative; top: -{{ page.cover_offset_y }}px" />           
+              <div class="slider-description">
+                <h4>{{ page.about }}</h4>
+             </div>
+            </li>
+          </ul>
+        </div>
+        <!-- ENDS slider content -->
+       </div> 
+      <!-- ENDS SLIDER -->
+
+    </div>
+  </header>
+  <!-- ENDS HEADER -->
+  
+  <!-- MAIN -->
+  <div id="main">
+    <div class="wrapper cf">
+    
+    
+    <!-- featured -->
+    <div class="home-featured">
+    
+      <ul id="filter-buttons">
+        <li><a href="#" data-filter="*" class="selected">show all</a></li>
+        <li><a href="#" data-filter=".photo">photo</a></li>
+        <li><a href="#" data-filter=".status">status</a></li>
+        <li><a href="#" data-filter=".link">link</a></li>
+        <li><a href="#" data-filter=".video">video</a></li>
+        <li><a href="#" data-filter=".video">note</a></li>
+      </ul>
+      
+      <!-- Filter container -->
+      <div id="filter-container" class="cf">
+        {% for post in posts %}
+          <figure class="{{ post.type}}">
+
+            {% case post.type %}
+              {% when 'photo' %}
+                <a href="{{ post.post_link }}" class="thumb"><img src="{{ post.picture }}" alt="alt" /></a>
+
+              {% when 'video'%}
+                <iframe src="{{ post.video.embed_src }}" frameborder="0"></iframe>
+
+              {% when 'link' %}
+                <a href="{{ post.post_link }}"><h4>{{ post.name }}</h4></a>
+
+              {% when 'note' %}
+                <a href="{{ post.post_link }}"><h4>{{ post.name }}</h4></a>
+
+              {% else %}
+                <a href="{{ post.post_link }}">{{ post.message }}</a>
+            {% endcase %}
+
+            <figcaption>
+              {{ post.message }}
+            </figcaption>
+          </figure>
+        {% endfor %}
+        
+      </div><!-- ENDS Filter container -->
+      
+    </div>
+    <!-- ENDS featured -->
+
+    
+    </div><!-- ENDS WRAPPER -->
+  </div>
+  <!-- ENDS MAIN -->
+    
+  {% snippet 'footer' %}
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<article class="format-link">
+  <div class="box cf">
+    <div class="entry-date" title="{{ post.created_time | time_in_words }}"><div class="number">{{ post.created_time | date: "%d" }}</div><div class="month">{{ post.created_time | date: "%b" }}</div></div>
+    
+    <div class="excerpt">
+      <a href="{{ post.link }}" class="post-heading" >{{ post.name }}</a>
+      <p>{{ post.message }}</p>
+    </div>
+    
+    <div class="meta">
+      <span class="format">Link</span>
+      <!--<span class="comments">16 comments</span>-->
+    </div>
+      
+  </div>
+</article>

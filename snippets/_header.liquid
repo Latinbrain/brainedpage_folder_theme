@@ -1,0 +1,27 @@
+<header>
+  <div class="wrapper cf">
+    
+    <div id="logo">
+      <a href="{{ site.url }}"><h1>{{ page.name | upcase }}</h1></a>
+    </div>
+    
+    <!-- nav -->
+    <ul id="nav" class="sf-menu">
+      <li{% if site.current_template == '' %} class="current-menu-item"{% endif%}>
+        <a href="{{ site.url }}">HOME</a>
+      </li>
+      <li{% if site.current_template == 'blog' or site.current_template == 'post' %} class="current-menu-item"{% endif%}>
+        <a href="{% template_url 'blog' %}">BLOG</a>
+      </li>
+      <li{% if site.current_template == 'about' %} class="current-menu-item"{% endif%}>
+        <a href="{% template_url 'about' %}">ABOUT</a>
+      </li>
+      <li{% if site.current_template == 'contact' %} class="current-menu-item"{% endif%}>
+        <a href="{% template_url 'contact' %}">CONTACT</a>
+      </li>
+    </ul>
+    <div id="combo-holder"></div>
+    <!-- ends nav -->
+
+  </div>
+</header>

@@ -1,0 +1,38 @@
+<!doctype html> 
+<html class="no-js">
+  
+{% snippet 'head' %}
+
+<body class="single">
+
+  <!-- HEADER -->
+  {% snippet 'header' %}
+  <!-- ENDS HEADER -->
+  
+  <!-- MAIN -->
+  <div id="main">
+    <div class="wrapper cf">
+    
+      <!-- masthead -->
+      <div class="masthead cf">
+        About us
+      </div>
+      <!-- ENDS masthead -->
+
+      <div id="page-content" class="cf">
+        {{ page.about }}
+      </div>
+
+      <!-- SIDEBAR -->
+      {% snippet 'sidebar' %}
+      <!-- ENDS SIDEBAR -->
+    
+    </div>
+    <!-- ENDS WRAPPER -->
+  </div>
+  <!-- ENDS MAIN -->
+  
+  {% snippet 'footer' %}
+
+</body>
+</html>

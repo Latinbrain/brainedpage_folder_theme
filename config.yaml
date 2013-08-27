@@ -1,0 +1,38 @@
+description: First Brainedpage theme
+author: Martin Becerra
+website: www.brainedpage.com
+default_preset: Vintage
+
+presets:
+  Vintage:
+    color_background: 
+      type: color
+      value: '#123123'
+    pepe: 
+      type: color
+      value: '#FFFFFF'
+    color_header: 
+      type: color
+      value: '#CCCCCC'
+    sidebar: 
+      type: boolean
+      value: true
+    footer_copyright: 
+      type: text
+      value: Vintage copyright
+  Fashion:
+    color_background: 
+      type: color
+      value: '#000000'
+    pepe: 
+      type: color
+      value: '#E4E4E4'
+    color_header: 
+      type: color
+      value: '#666666'
+    sidebar: 
+      type: boolean
+      value: false
+    footer_copyright: 
+      type: text
+      value: Fashion copyright

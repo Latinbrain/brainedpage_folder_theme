@@ -1,0 +1,66 @@
+<!-- FOOTER -->
+<footer>
+  <div class="wrapper cf">
+  
+    <!-- widgets -->
+    <ul  class="widget-cols cf">
+      <li class="first-col">
+        
+        <div class="widget-block">
+          <h4>RECENT POSTS</h4>
+          <div class="recent-post cf">
+            <a href="#" class="thumb"><img src="" alt="Post" /></a>
+            <div class="post-head">
+              <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="second-col">
+        
+        <div class="widget-block">
+          <h4>ABOUT</h4>
+          <p>{{ page.about }}</p> 
+        </div>
+        
+      </li>
+      
+      <li class="third-col">
+        
+        <div class="widget-block">
+          <div id="tweets" class="footer-col tweet">
+            <h4>TWITTER WIDGET</h4>
+          </div>
+        </div>
+            
+      </li>
+      
+      <li class="fourth-col">
+        
+        <div class="widget-block">
+          <h4>LINKS</h4>
+          <ul>
+            <li class="cat-item"><a href="{{ site.url }}" >Home</a></li>
+            <li class="cat-item"><a href="{% template_url 'blog' %}" >Blog</a></li>
+            <li class="cat-item"><a href="{% template_url 'about' %}" >About</a></li>
+            <li class="cat-item"><a href="{% template_url 'contact' %}" >Contact</a></li>
+          </ul>
+        </div>
+      </li> 
+    </ul>
+    <!-- ENDS widgets -->
+    
+    <!-- bottom -->
+    <div class="footer-bottom">
+      <div class="left">Powered by <a href="http://www.brainedpage.com" target="_blank">Brainedpage</a> | Design by <a href="http://luiszuno.com" target="_blank">luiszuno.com</a></div>
+        <ul id="social-bar" class="cf sb">
+          <li><a href="{{ page.link }}"  title="Become a fan" class="facebook">Facebook</a></li>
+          <li><a href="https://twitter.com/" title="Follow my tweets" class="twitter"></a></li>
+        </ul>
+    </div>  
+    <!-- ENDS bottom -->
+  
+  </div>
+</footer>
+<!-- ENDS FOOTER -->

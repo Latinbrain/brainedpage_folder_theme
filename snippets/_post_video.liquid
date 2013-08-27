@@ -1,0 +1,18 @@
+<article class="format-video">
+  <div class="video-container">
+    <iframe src="{{ post.video.embed_src }}" frameborder="0"></iframe>
+  </div>
+  <div class="box cf">
+    <div class="entry-date" title="{{ post.created_time | time_in_words }}"><div class="number">{{ post.created_time | date: "%d" }}</div><div class="month">{{ post.created_time | date: "%b" }}</div></div>
+    
+    <div class="excerpt">
+      <a href="{{ post.post_link }}" class="post-heading" >{{ post.name }}</a>
+      <p>{{ post.message }}</p>
+    </div>
+    
+    <div class="meta">
+      <span class="format">Video</span>
+      <!--<span class="comments">16 comments</span>-->
+    </div>
+  </div>
+</article>

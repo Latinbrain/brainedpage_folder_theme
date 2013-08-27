@@ -1,0 +1,66 @@
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ page.name }}</title>
+   
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" media="all" href="{% stylesheet_url 'style.css' %}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->   
+      
+  <!-- JS -->
+  <script src="{% javascript_url 'jquery-1.7.1.min.js' %}"></script>
+  <script src="{% javascript_url custom.js %}?a=123123"></script>
+  <script src="{% javascript_url tabs.js %}"></script>
+  <script src="{% javascript_url css3-mediaqueries.js %}"></script>
+  <script src="{% javascript_url jquery.columnizer.min.js %}"></script>
+  
+  <!-- Isotope -->
+  <script src="{% javascript_url jquery.isotope.min.js %}"></script>
+  
+  <!-- Lof slider -->
+  <script src="{% javascript_url jquery.easing.js %}"></script>
+  <script src="{% javascript_url lof-slider.js %}"></script>
+  <link rel="stylesheet" href="{% stylesheet_url lof-slider.css %}" media="all"  /> 
+  <!-- ENDS slider -->
+  
+  <!-- Tweet -->
+  <link rel="stylesheet" href="{% stylesheet_url jquery.tweet.css %}" media="all"  /> 
+  <script src="{% javascript_url tweet/jquery.tweet.js %}" ></script> 
+  <!-- ENDS Tweet -->
+
+  
+  <!-- prettyPhoto -->
+  <script  src="{% javascript_url prettyPhoto/js/jquery.prettyPhoto.js %}"></script>
+  <link rel="stylesheet" href="{% stylesheet_url prettyPhoto.css %}"  media="screen" />
+  <!-- ENDS prettyPhoto -->
+  
+  <!-- poshytip -->
+  <!--<link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css"  /> -->
+  <link rel="stylesheet" href="{% stylesheet_url tip-yellowsimple.css %}"  />
+  <script  src="{% javascript_url poshytip-1.1/src/jquery.poshytip.min.js %}"></script>
+  <!-- ENDS poshytip -->
+  
+  <!-- JCarousel -->
+  <script type="text/javascript" src="{% javascript_url jquery.jcarousel.min.js %}"></script>
+  <link rel="stylesheet" media="screen" href="{% stylesheet_url carousel.css %}" /> 
+  <!-- ENDS JCarousel -->
+  
+  <!-- GOOGLE FONTS -->
+  <link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
+
+  <!-- modernizr -->
+  <script src="{% javascript_url modernizr.js %}"></script>
+  
+  <!-- SKIN -->
+  <link rel="stylesheet" media="all" href="{% stylesheet_url skin.css %}"/>
+  
+  <!-- Less framework -->
+  <link rel="stylesheet" media="all" href="{% stylesheet_url lessframework.css %}"/>
+  
+  <!-- flexslider -->
+  <link rel="stylesheet" href="{% stylesheet_url 'flexslider.css' %}" >
+  <script src="{% javascript_url 'jquery.flexslider.js' %}"></script>
+
+</head>

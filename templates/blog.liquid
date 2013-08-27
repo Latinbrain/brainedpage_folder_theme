@@ -1,0 +1,82 @@
+<!doctype html> 
+<html class="no-js">
+
+{% snippet 'head' %}
+
+<body class="blog">
+
+  <!-- HEADER -->
+  {% snippet 'header' %}
+  <!-- ENDS HEADER -->
+  
+  <!-- MAIN -->
+  <div id="main">
+    <div class="wrapper cf">
+
+      <!-- masthead -->
+      <div class="masthead cf">
+        OUR BLOG
+      </div>
+      <!-- ENDS masthead -->
+      
+      <!-- posts list -->
+      <div id="posts-list" class="cf">          
+        
+        {% for post in posts %}
+
+          {% if post.type == 'video' %}
+            <!-- Video -->
+            {% snippet 'post_video' %}
+            <!-- ENDS Video -->
+          
+          {% elsif post.type == 'link' %}
+            <!-- Link -->
+            {% snippet 'post_link' %}
+            <!-- ENDS Link -->
+
+          {% elsif post.type == 'status' %}
+            <!-- status -->
+            {% snippet 'post_status' %}
+            <!-- ENDS status -->
+
+          {% elsif post.type == 'photo' %}
+            <!-- Image -->
+            {% snippet 'post_photo' %}
+            <!-- ENDS Image -->
+
+          {% elsif post.type == 'note' %}
+            <!-- Note -->
+            {% snippet 'post_note' %}
+            <!-- ENDS Note -->
+
+          {% else %}
+            <!-- Default -->
+            {% snippet 'post_default' %}
+            <!-- ENDS  Default -->
+
+          {% endif %}
+          
+        {% endfor %}
+
+        <!-- page-navigation 
+          <div class="page-navigation cf">
+            <div class="nav-next"><a href="#">&#8592; Older Entries </a></div>
+            <div class="nav-previous"><a href="#">Newer Entries &#8594;</a></div>
+          </div>
+          ENDS page-navigation -->
+      </div>
+      <!-- ENDS posts list -->
+    
+      <!-- SIDEBAR -->
+      {% snippet 'sidebar' %}
+      <!-- ENDS SIDEBAR -->
+    
+    </div>
+    <!-- ENDS WRAPPER -->
+  </div>
+  <!-- ENDS MAIN -->
+
+{% snippet 'footer' %}
+
+</body>
+</html>

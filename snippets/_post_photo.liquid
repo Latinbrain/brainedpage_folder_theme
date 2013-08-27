@@ -1,0 +1,19 @@
+<article class="format-image">
+  <div class="feature-image">
+    <a href="{{ post.picture }}" data-rel="prettyPhoto">
+      <img src="{{ post.picture }}" alt="{{ post.message }}" />
+    </a>
+  </div>
+  <div class="box cf">
+    <div class="entry-date" title="{{ post.created_time | time_in_words }}"><div class="number">{{ post.created_time | date: "%d" }}</div><div class="month">{{ post.created_time | date: "%b" }}</div></div>
+    
+    <div class="excerpt">
+      <p>{{ post.message }}</p>
+    </div>
+    
+    <div class="meta">
+      <span class="format">Image</span>
+      <!--<span class="comments">16 comments</span>-->
+    </div>
+  </div>
+</article>

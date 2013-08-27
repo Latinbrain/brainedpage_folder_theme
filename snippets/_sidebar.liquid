@@ -1,0 +1,13 @@
+<aside id="sidebar">
+  <ul>
+    <li class="block">
+      <h4>About {{ page.name}}</h4>
+      <p>{{ page.about }}</p>
+    </li>
+
+    <li class="block">
+      <h4>Facebook likes</h4>
+      <p style="font-size: 16px;">{{ page.likes | number_delimite }}</p>
+    </li>
+  </ul>
+</aside>
