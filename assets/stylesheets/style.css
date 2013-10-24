@@ -181,7 +181,7 @@ h6 {
   text-align: center;
 }
 .widget-cols > li {
-  width: 220px;
+  width: 290px;
   float: left;
   margin-right: 20px;
 }
@@ -729,4 +729,9 @@ footer h6 {
 .footer-bottom .right {
   width: 50%;
   float: right;
+}
+/* ABOUT */
+.about-img {
+  float: left;
+  margin-right: 10px;
 }
